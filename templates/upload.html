@@ -8,5 +8,9 @@
       </form>
 
       <img src="../static/{{imgname}}" alt="dog" width="300" height="300"/>
+      {% if mode=='POST' %}
+      <p>Your breed is: {{breed}}</p>
+      <p>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></p>
+      {% endif %}
    </body>
 </html>

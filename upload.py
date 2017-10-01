@@ -4,6 +4,11 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static'
 
+def get_breed(imgfile):
+    #get breed from index 
+    breed = 'pug'
+    return breed
+
 @app.route('/uploader', methods = ['GET','POST'])
 def upload_file():
    if request.method == 'GET':
@@ -12,7 +17,8 @@ def upload_file():
       f = request.files['file']
       sfname = 'static/'+str(secure_filename(f.filename))
       f.save(sfname)
-      return render_template('upload.html',imgname=f.filename)
+      dog = get_breed(sfname)
+      return render_template('upload.html',imgname=f.filename,breed=dog,mode=request.method)
 
 if __name__ == '__main__':
    app.run(debug = True)
