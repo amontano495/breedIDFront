@@ -1,7 +1,20 @@
 <html>
    <body>
+
+   <style>
+     p.ex {
+     width: 500px;
+   }
+   </style>
+
+   <h1>Who's that doggo!</h1>
+   <p class="ex">This is a web application that allows the user to upload a
+     picture of a dog, and it will output the specific breed of dog.</p>
+   <p class="ex">To begin, press the upload button bellow and select a picture
+      that features a doggo.</p>
+   <p class="ex">When you're ready, press the submit button!!</p>
    
-      <form action = "http://localhost:5000/uploader" method = "POST" 
+      <form action = "http://localhost:5000/uploader" method = "POST"
          enctype = "multipart/form-data">
          <input type = "file" name = "file" />
          <input type = "submit"/>
