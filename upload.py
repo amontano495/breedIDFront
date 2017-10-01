@@ -6,6 +6,7 @@ UPLOAD_FOLDER = './static'
 
 def get_breed(imgfile):
     #get breed from index 
+    #breed = dex(imgfile)
     breed = 'pug'
     return breed
 
