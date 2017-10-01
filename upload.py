@@ -12,9 +12,9 @@ def upload():
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
-      f.save(secure_filename(f.filename))
-      return render_template('uploaded.html',
-              imgname=f.filename)
+      sfname = 'static/'+str(secure_filename(f.filename))
+      f.save(sfname)
+      return render_template('uploaded.html',imgname=f.filename)
 
 if __name__ == '__main__':
    app.run(debug = True)
