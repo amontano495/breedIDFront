@@ -1,0 +1,43 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head> 
+  <body>
+
+   <style>
+     p.ex {
+     width: 500px;
+   }
+   </style>
+
+   <h1>Who's that doggo!</h1>
+
+   <div id="description">
+	   <p class="ex">This is a web application that allows the user to upload a
+	     picture of a dog, and it will output the specific breed of dog.</p>
+	   <p class="ex">To begin, press the upload button bellow and select a picture
+	      that features a doggo.</p>
+	   <p class="ex">When you're ready, press the submit button!!</p>
+   </div>
+
+   <div id="submitter">
+           <form action = "http://localhost:5000/uploader" method = "POST"
+		enctype = "multipart/form-data">
+		<input type = "file" name = "file" />
+		<input type = "submit"/>
+	   </form>
+   </div>
+
+   <div id="dogpic">
+           <img src="../static/{{imgname}}" alt="dog" width="300" height="300"/>
+   </div>
+
+   <div id="getbreed">
+           {% if mode=='POST' %}
+           <p>Your breed is: {{breed}}</p>
+           <p>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></p>
+           {% endif %}
+   </div>
+
+   </body>
+</html>

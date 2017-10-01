@@ -1,41 +1,102 @@
-<html>
-   <link rel="stylesheet" href="styles.css">
-   <body>
+<!DOCTYPE html>
+<html lang="en">
 
-   <style>
-     p.ex {
-     width: 500px;
-   }
-   </style>
+  <head>
 
-   <h1>Who's that doggo!</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-   <div id="description">
-	   <p class="ex">This is a web application that allows the user to upload a
-	     picture of a dog, and it will output the specific breed of dog.</p>
-	   <p class="ex">To begin, press the upload button bellow and select a picture
-	      that features a doggo.</p>
-	   <p class="ex">When you're ready, press the submit button!!</p>
-   </div>
+    <title>Portfolio Item - Start Bootstrap Template</title>
 
-   <div id="submitter">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/portfolio-item.css')}}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">PupperDex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Who's That Doggo!
+        <small></small>
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <img class="img-fluid" src="../static/{{imgname}}" alt="">
+		   {% if mode=='POST' %}
+		   <h3>Your breed is: {{breed}}</h3>
+		   <p>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></p>
+		   {% endif %}
+	   </div>
+        <div class="col-md-4">
            <form action = "http://localhost:5000/uploader" method = "POST"
 		enctype = "multipart/form-data">
 		<input type = "file" name = "file" />
 		<input type = "submit"/>
 	   </form>
-   </div>
+          <h3 class="my-3">About</h3>
+          <p> This is a web application that allows the user to upload a picture of a dog, and it will output the specific breed of dog. To begin, press the upload button bellow and select a picture that features a doggo. When you're ready, press the submit button!!</p>
+          <h3 class="my-3">Project Details</h3>
+          <ul>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>HTML/CSS + Bootstrap</li>
+            <li>Sci-Kit Learn</li>
+          </ul>
 
-   <div id="dogpic">
-           <img src="../static/{{imgname}}" alt="dog" width="300" height="300"/>
-   </div>
+        </div>
 
-   <div id="getbreed">
-           {% if mode=='POST' %}
-           <p>Your breed is: {{breed}}</p>
-           <p>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></p>
-           {% endif %}
-   </div>
+      </div>
+      <!-- /.row -->
 
-   </body>
+      
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
 </html>
