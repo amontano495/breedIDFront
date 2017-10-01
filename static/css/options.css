@@ -1,24 +1,25 @@
 ﻿
 
 
-	.wide_cont { max-width:1240px !important;  margin:0px auto; box-shadow:0px 0px 3px #b4b4b4 !important;}
+	.wide_cont { max-width:1240px !important;  margin:0px auto; box-shadow:0px 0px 3px #FFFFFF !important;}
 	body {
       background: #fdfdfd url("http://html.orange-idea.com/builder/wp-content/themes/builder/images/bg/diagonal-noise.png") fixed !important;
     }
 
 
-.caption.commander_heading{	color:#AEC71E;}
+.caption.commander_heading{	color:#FFFFFF;}
 .caption.commander_small_heading{ color:#AEC71E;}
 
-a { color: #AEC71E;}
-a:hover {color:#000000;}
+a { color: #4286f4;}
+a:hover {color:#cccccc;}
 
+/*console background*/
 .wide_cont {background-color:#fdfdfd;}
 
 .colored {color: #AEC71E !important;}
 .top_line {background-color: #AEC71E !important; background-image: url("") !important;}
-.top_line p {color: #FFFFFF !important;}
-.top_line a {color: #FFFFFF !important;}
+.top_line p {color: #000000 !important;}
+.top_line a {color: #000000 !important;}
 .top_line a:hover {color: #FFFFFF !important;}
 
 .page_head {padding-top: 0px !important;
@@ -40,7 +41,7 @@ border-radius: 0px !important;
 .page_head .menu .current-menu-parent {background: #AEC71E}
 
 .page_head .menu li a {
-color: #666666;
+color: #000000;
 font-size: 12px;
 padding-left: 20px;
 padding-right: 20px;
@@ -48,13 +49,13 @@ padding-top: 25px;
 padding-bottom: 25px;
 }
 .page_head .menu ul {top: 85px !important; }
-.page_head .menu .current-menu-item a {color: #ffffff !important ;}
+.page_head .menu .current-menu-item a {color: #000000 !important ;}
 
 .page_head .menu .current-menu-item {background: #AEC71E !important ;}
 .page_head .menu li:hover { background: #444444 ;}
 .page_head .menu li:hover a { color: #ffffff ;}
 
-.page_head .menu ul .current-menu-item a{ color: #ffffff !important;}
+.page_head .menu ul .current-menu-item a{ color: #000000 !important;}
 .page_head .menu .current-menu-item ul a{ color: #bcbcbc !important;}
 
 
@@ -109,18 +110,18 @@ border-radius: 0px 0px 0px 0px !important;
 border-radius: 0px 0px  0px 0px !important;
 }
 
-
+/*bg of banner*/
 .tag_line { background-image: url(""); border-bottom: 1px solid #ededed; border-top: 1px solid #ededed; background-color: #ffffff }
 .welcome {padding-bottom: 20px; padding-top: 20px}
 
 .footer {
-	color: #a8a8a8;
+	color: #cccccc;
 	background-image: url("");
-    background-color: #303030;
+    background-color: #000000;
 	margin-top:0px; 
 	padding-top:40px; 
     padding-bottom: 10px;
-    border-top: 1px solid #444444;
+    border-top: 1px solid #cccccc;
 }
 .footer p { color: #a8a8a8;}
 .footer strong {color: #ffffff;}
@@ -136,13 +137,13 @@ border-radius: 0px 0px  0px 0px !important;
 .footer h5 { color:#ffffff; }
 .footer hr{ border-top-color: #444444;  margin-top:6px; margin-bottom:15px;}
 .bottom_line { background-color: #3a3a3a; background-image: url(""); }
-.bottom_line { color: #FFFFFF;}
-.bottom_line a {color: #FFFFFF;}
-.bottom_line a:hover {color: #FFFFFF;}
+.bottom_line { color: #000000;}
+.bottom_line a {color: #000000;}
+.bottom_line a:hover {color: #000000;}
 .main_content_area {margin-top: 30px;}
 
 .main_content_area .date { background: #3a3a3a; border-radius:0px;}
-.main_content_area .date h6 { color:#ffffff;  text-shadow:0px 1px #000000;}
+.main_content_area .date h6 { color:#000000;  text-shadow:0px 1px #000000;}
 
 .blog_item .view-first .mask {background-color: rgba(0,0,0, 0.15)}
 .blog_item .view a.info {background-color:#000000; background-image: url("http://www.orange-idea.com/assets/builder/zoom.png")}
@@ -156,7 +157,7 @@ border-radius: 0px 0px  0px 0px !important;
 .pride_pg .current {padding: 4px 10px; border-radius:0px; background-color: #AEC71E;  color:#ffffff;  background-image: url("");}
 .pride_pg a:hover  {
 	background-color: #AEC71E;
-	color:#ffffff;
+	color:#000000;
 	text-shadow: none;
 	background-image: url("");
 }
@@ -182,8 +183,8 @@ border-radius: 0px 0px  0px 0px !important;
 .blog_sidebar .current-menu-item a {color:#AEC71E;}
 
 
-.filter_button {  font-size:11px; margin-right:3px; padding:4px 8px; background-color:#3a3a3a; border:1px solid #3a3a3a; border-radius:0px; color:#ffffff; text-shadow:1px 1px #111111;}
-.filter_button:hover {background-color:#AEC71E; color:#ffffff; border-color:#AEC71E }
+.filter_button {  font-size:11px; margin-right:3px; padding:4px 8px; background-color:#3a3a3a; border:1px solid #3a3a3a; border-radius:0px; color:#000000; text-shadow:1px 1px #111111;}
+.filter_button:hover {background-color:#AEC71E; color:#000000; border-color:#AEC71E }
 .filter_current { background-color:#AEC71E; border-color:#AEC71E; color:#ffffff;}
 
 .portfolio_item .view-first .mask {background-color: rgba(0,0,0, 0.35)}
@@ -193,7 +194,7 @@ border-radius: 0px 0px  0px 0px !important;
 .portfolio_item .view a.link:hover {background-color:#AEC71E;}
 
 
-.descr {background-color:#f9f9f9; background-image: url(""); border:1px solid #ededed;}
+.descr {background-color:#cccccc; background-image: url(""); border:1px solid #cccccc;}
 .descr a { color: #AEC71E;}
 .descr a:hover { color: #000000;}
 .clo { font-size:11px; color:#747474 !important;}
@@ -237,21 +238,21 @@ border-radius: 0px 0px  0px 0px !important;
 
 body {
 	font-family: arial !important;
-	color: #666666 !important;
+	color: #FFFFFF !important;
 	font-style: normal !important;
 	font-size: 12px !important; 
 }
 
 h1 {
 	font-family: open sans !important;
-	color: #555555 !important;
+	color: #FFFFFF !important;
 	font-style: normal !important;
 	font-size: 36px !important; 
 	
 }
 h2{
 	font-family: open sans;
-	color: #555555;
+	color: #FFFFFF;
 	font-style: normal;
 	font-size: 30px; 
 	
@@ -291,5 +292,5 @@ h6 {
 	.page_head .menu ul li:first-child > a:after { border-bottom:0px !important;}
     .page_head .menu ul {top: 70px !important; }
 
-.blog_head h3 a { color:#3a3a3a;}
+.blog_head h3 a { color:#000000;}
 .blog_head h3 a:hover { color:#AEC71E;}

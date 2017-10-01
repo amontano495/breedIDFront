@@ -1,102 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en-US">
+<head>
+        <meta charset="utf-8">
+        <title>Builder &#8211; Resonsive Wordpress Theme</title>
 
-  <head>
+        <!-- Le styles -->
+	<link href="{{ url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/docs.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/options.css')}}" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%
+        2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%
+        2Cgreek%2Cvietnamese%2Clatin-ext%2Ccyrillic&#038;ver=3.4.2" id="gOpenSans-css" media="all"
+        rel="stylesheet" type="text/css"/>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Le fav and touch icons -->
 
-    <title>Portfolio Item - Start Bootstrap Template</title>
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="assets/css/ie.css"/>
+        <![endif]-->
+</head>
+<body>
+    <div class="wide_cont">
+        <!-- START TOP LINE-->
+        <div class="top_line"></div>
+        <!-- END TOP LINE-->
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/portfolio-item.css')}}" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">PupperDex</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+          <!--PAGE HEAD-->
+        <div class="page_head">
+            <div class="container">
+                <div class="row">
+                    <div class="span3">
+                        <!--START LOGO IMAGE-->
+                        <div class="logo">
+                            <a href="index.html">
+				    <img alt="Builder &#8211; Resonsive Wordpress Theme" src="{{ url_for('static',filename='images/logo.png')}}"/></a>
+                        </div>
+                        <!-- END LOGO IMAGE-->
+                    </div>
+                    <div class="span9">
+                        <!-- START MAIN MENU-->
+                        <nav>
+                        <ul class="menu">
+                            <li><a href="http://themeforest.net/user/OrangeIdea/portfolio?ref=OrangeIdea"
+                              target="_blank"></a></li>
+                        </ul>
+                        </nav>
+                        <!-- END MAIN MENU-->
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
+        <!--/PAGE HEAD-->
 
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Who's That Doggo!
-        <small></small>
-      </h1>
-
-      <!-- Portfolio Item Row -->
-      <div class="row">
-
-        <div class="col-md-8">
-          <img class="img-fluid" src="../static/{{imgname}}" alt="">
-		   {% if mode=='POST' %}
-		   <h3>Your breed is: {{breed}}</h3>
-		   <p>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></p>
-		   {% endif %}
-	   </div>
-        <div class="col-md-4">
-           <form action = "http://localhost:5000/uploader" method = "POST"
-		enctype = "multipart/form-data">
-		<input type = "file" name = "file" />
-		<input type = "submit"/>
-	   </form>
-          <h3 class="my-3">About</h3>
-          <p> This is a web application that allows the user to upload a picture of a dog, and it will output the specific breed of dog. To begin, press the upload button bellow and select a picture that features a doggo. When you're ready, press the submit button!!</p>
-          <h3 class="my-3">Project Details</h3>
-          <ul>
-            <li>Python</li>
-            <li>Flask</li>
-            <li>HTML/CSS + Bootstrap</li>
-            <li>Sci-Kit Learn</li>
-          </ul>
-
+        <!--WELCOME AREA-->
+        <div class="tag_line">
+            <div class="container">
+                <div class="row">
+                <div class="span12">
+                    <div class="welcome">
+                        <h3><span class="colored">The PupperDex:</span> It's like Shazam for dogs</h3>
+                        <div class="subpage_breadcrumbs_dv"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-      <!-- /.row -->
-
-      
-    </div>
-    <!-- /.container -->
+        <!--/WELCOME AREA-->
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--MAIN CONTENT AREA-->
+        <div class="main_content_area">
+             <div class="container">
+                 <div class="row">
+                     <!--START BLOG CONTENT-->
+                     <div class="span8">
+                        <div class="row">
+                            <!-- POST IMAGE -->
 
-  </body>
+                            <div class="span8" >
+                               <div class="row">
+                                <div class="span8 blog_item nolink" style="margin-bottom:0px;">
+                                    <div class="view view-first">
+                                        <img src="../static/{{imgname}}" alt="dog"/>
+                                    </div>
+				   <div id="getbreed">
+					   {% if mode=='POST' %}
+					   <h3>Your breed is: {{breed}}</h3>
+					   <h3>Learn more at <a href="https://en.wikipedia.org/wiki/{{breed}}">this page!</a></h3>
+					   {% endif %}
+				   </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- START SIDEBAR -->
+                    <div class="span4  portfolio-description">
+                        <!-- FIRST WIDGET -->
+                        <div class="portfolio_post_item_description">
+                                <div>
+                                    <h4>PupperDex</h4>
+                                </div>
+
+                                <div class="textwidget">
+                                    <h6 style="font-weight: 600 !important; text-transform: uppercase
+                                    !important;">
+                                    </h6>
+                                    <p class="small">The PupperDex is a web application that allows users to
+                                       input an image of a dog, and it will output the breed of the given
+                                        dog!</p>
+                                        <h6 style="font-weight: 600 !important; text-transform:
+                                        uppercase !important;">How it works:</h6>
+                                        <p>The PupperDex opperates with HTML and CSS front end, and a
+                                          python backend. An image is uploaded by the user and sent to our
+                                          macine learning algorithm. This algorithm has been trained to
+                                          recognize over 120 various breeds. After processing the image the
+                                          algorithm returns the breed that most resembles the dog in the
+                                          image.</p>
+                                        <div class="separator_dash"/>
+                                        <h6 style="font-weight: 600 !important; text-transform: uppercase
+                                        !important;">Try It!</h6>
+                                        <p class=" nobottommargin">
+                                          <div id="submitter">
+                                                  <form action = "http://localhost:5000/uploader" method = "POST"
+                                       		enctype = "multipart/form-data">
+                                       		<input type = "file" name = "file" />
+                                       		<input type = "submit"/>
+                                       	   </form>
+                                          </div>
+                                        <span class="small-italic">Click 'Browse' and then press submit!
+                                          We will take care of the rest.</span>
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+             </div>
+         </div>
+        <!--END MAIN CONTENT AREA-->
+
+        <!--FOOTER-->
+
+        <!--START BOTTOM LINE-->
+        <div class="bottom_line">
+            <div class="container">
+                <div class="row">
+                    <!-- START COPYRIGHT INFORMATION-->
+                    <div class="span6">
+                    </div>
+                    <!-- END COPYRIGHT INFORMATION-->
+                    <div class="span6">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END BOTTOM LINE-->
+        <!--END FOOTER-->
+
+
+</body>
 </html>
